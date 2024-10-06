@@ -261,9 +261,11 @@ class FlutterPolls extends HookWidget {
                           decoration: votedPollOptionsBorder != null
                               ? BoxDecoration(
                                   border: votedPollOptionsBorder,
-                                  borderRadius: BorderRadius.all(
-                                    votedPollOptionsRadius ??
-                                        const Radius.circular(8),
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft: votedPollOptionsRadius?? const Radius.circular(8),
+                                    topRight: votedPollOptionsRadius?? const Radius.circular(8),
+                                    bottomRight: votedPollOptionsRadius?? const Radius.circular(8),
+                                    topLeft: votedPollOptionsRadius?? const Radius.circular(8),
                                   ),
                                 )
                               : null,
